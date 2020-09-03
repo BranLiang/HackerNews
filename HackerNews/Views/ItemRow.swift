@@ -1,14 +1,14 @@
 //
-//  ItemView.swift
+//  ItemRow.swift
 //  HackerNews
 //
-//  Created by BranLiang on 2020/9/2.
+//  Created by BranLiang on 2020/9/3.
 //  Copyright © 2020 Corran. All rights reserved.
 //
 
 import SwiftUI
 
-struct ItemView: View {
+struct ItemRow: View {
     var item: Item
 
     var body: some View {
@@ -21,7 +21,7 @@ struct ItemView: View {
     }
 }
 
-struct ItemView_Previews: PreviewProvider {
+struct ItemRow_Previews: PreviewProvider {
     static var previews: some View {
         let testItem = Item(
             id: 1,
@@ -32,6 +32,6 @@ struct ItemView_Previews: PreviewProvider {
             url: URL(string: "https://erickhun.com/posts/kubernetes-faster-services-no-cpu-limits/")!,
             score: 27
         )
-        return ItemView(item: testItem)
+        return ItemRow(item: testItem)
     }
 }

@@ -1,14 +1,14 @@
 //
-//  ItemListView.swift
+//  ItemList.swift
 //  HackerNews
 //
-//  Created by BranLiang on 2020/9/2.
+//  Created by BranLiang on 2020/9/3.
 //  Copyright © 2020 Corran. All rights reserved.
 //
 
 import SwiftUI
 
-struct ItemListView: View {
+struct ItemList: View {
     var items: [Item]
     
     var body: some View {
@@ -29,7 +29,7 @@ struct ItemListView: View {
     }
 }
 
-struct ItemListView_Previews: PreviewProvider {
+struct ItemList_Previews: PreviewProvider {
     static var previews: some View {
         let items = [
             Item(
@@ -51,6 +51,6 @@ struct ItemListView_Previews: PreviewProvider {
                 score: 245
             )
         ]
-        return ItemListView(items: items)
+        return ItemList(items: items)
     }
 }
