@@ -29,7 +29,7 @@ struct ItemView_Previews: PreviewProvider {
             by: "Bran Liang",
             time: Date(timeIntervalSince1970: 1599054458),
             title: "Kubernetes: Make your services faster by removing CPU limits",
-            url: "https://erickhun.com/posts/kubernetes-faster-services-no-cpu-limits/",
+            url: URL(string: "https://erickhun.com/posts/kubernetes-faster-services-no-cpu-limits/")!,
             score: 27
         )
         return ItemView(item: testItem)

@@ -22,6 +22,6 @@ struct Item: Identifiable {
     var by: String
     var time: Date
     var title: String
-    var url: String
+    var url: URL
     var score: Int
 }
