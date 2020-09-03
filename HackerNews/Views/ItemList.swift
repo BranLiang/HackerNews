@@ -17,10 +17,9 @@ struct ItemList: View {
                 ForEach(items) { item in
                     NavigationLink(
                         destination: WebView(url: item.url)
-                            .navigationBarTitle("")
-                            .navigationBarHidden(true)
+                            .edgesIgnoringSafeArea(.top)
                     ) {
-                        ItemView(item: item)
+                        ItemRow(item: item)
                     }
                 }
             }

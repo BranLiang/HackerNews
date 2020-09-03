@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ItemType {
+enum ItemType: String, Codable {
     case job
     case story
     case comment
@@ -16,7 +16,7 @@ enum ItemType {
     case pollopt
 }
 
-struct Item: Identifiable {
+struct Item: Identifiable, Codable {
     var id: Int
     var type: ItemType
     var by: String

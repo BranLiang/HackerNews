@@ -9,8 +9,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var itemListModel: ItemListModel
     var body: some View {
-        Text("Hello, World!")
+        ItemList(items: self.itemListModel.items)
+            .onAppear {
+                self.itemListModel.setup()
+            }
     }
 }
 
