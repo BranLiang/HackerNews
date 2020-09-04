@@ -16,7 +16,10 @@ struct HackerNewsAPI {
         let url = URL(string: "\(baseUrl)/item/\(id).json")
         URLSession.shared.dataTask(with: url!) { (data, _, _) in
             do {
-                let item = try JSONDecoder().decode(Item.self, from: data!)
+                var item = try JSONDecoder().decode(Item.self, from: data!)
+                if item.url == nil {
+                    item.url = URL(string: "https://news.ycombinator.com/item?id=\(item.id)")
+                }
                 DispatchQueue.main.async {
                     onComplete(item)
                 }

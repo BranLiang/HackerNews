@@ -14,7 +14,7 @@ struct ContentView: View {
         ItemList(items: self.itemListModel.items)
             .onAppear {
                 self.itemListModel.setup()
-            }
+        }
     }
 }
 

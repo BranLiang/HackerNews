@@ -22,6 +22,6 @@ struct Item: Identifiable, Codable {
     var by: String
     var time: Date
     var title: String
-    var url: URL
+    var url: URL?
     var score: Int
 }
